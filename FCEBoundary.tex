@@ -30,6 +30,7 @@
 \newtheorem{question}[theorem]{Question}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem*{conjecture1}{Conjecture}
+\newtheorem{rem}[theorem]{Overview}
 
 \theoremstyle{definition}%[section]
 \newtheorem{definition}[theorem]{Definition}%[section]
@@ -50,8 +51,8 @@
 
 \newcommand{\ucong}{\rotatebox{90}{$\cong$}}
 
-\title{Fibred coarse embedding and the coarse Nokikov conjecture.} 
-\date{September 2012}
+\title{Fibred coarse embeddings and the coarse Nokikov conjecture.} 
+\date{April 2013}
 \author{Martin Finn-Sell}
 \email{Martin Finn-Sell: ms1205@soton.ac.uk}
 
@@ -59,7 +60,7 @@
 \bibliographystyle{alpha}
 \maketitle
 \begin{abstract}
-The connection between the coarse geometry of metric spaces and analytic properties of topological groupoids is well known. The main results of of Skandalis, Tu and Yu is that a space admits a coarse embedding into Hilbert space if and only if to the associated topological groupoid has the Haagerup property, from where it follows that the coarse Baum-Connes conjecture holds for such a space. The property of a admitting a fibred coarse embedding into Hilbert space was introduced by Chen, Wang and Yu to provide a property that is sufficient for the maximal analogue to this natural geometric conjecture. We provide a dictionary between a space admitting a fibred coarse embedding and the corresponding groupoid, and some applications of this dictionary to some problems within coarse geometry.
+The connection between the coarse geometry of metric spaces and analytic properties of topological groupoids is well known. The main results of of Skandalis, Tu and Yu is that a space admits a coarse embedding into Hilbert space if and only if to the associated topological groupoid has the Haagerup property, from where it follows that the coarse Baum-Connes conjecture holds for such a space. The property of a admitting a fibred coarse embedding into Hilbert space was introduced by Chen, Wang and Yu to provide a property that is sufficient for the maximal analogue to the coarse Baum-Connes conjecture; we provide a dictionary between a space admitting a fibred coarse embedding and the corresponding groupoid, and some applications of this dictionary to certain problems within coarse geometry.
 \end{abstract}
 
 \section{Introduction}
@@ -70,11 +71,11 @@ The application of coarse methods to algebraic topological problems is well know
 \end{equation*}
 is an isomorphism for all uniformly discrete spaces $X$ with bounded geometry. One well known approach to this conjecture for a suitable metric spaces $X$ is via the concept of a \textit{coarse embedding into Hilbert space}. A seminal paper by Yu \cite{MR1728880} first showed the importance of a coarse embeddings into Hilbert space by proving that this is a sufficient condition for the coarse Baum-Connes assembly map to be an isomorphism.
 
-In this paper we study the relationship between the concept of a \textit{fibred coarse embedding into Hilbert space} and the coarse Novikov conjecture. Intuitively, a space admits a fibred coarse embedding into Hilbert space if for each scale it is acceptable to forget bounded portions of the space and embed what remains locally into Hilbert space in a manner compatible with the global structure. We make this precise in Definition \ref{def:FCE}.
+In this paper we study the relationship between the concept of a \textit{fibred coarse embedding into Hilbert space} and the coarse analogue of the strong Novikov conjecture. Intuitively, a space admits a fibred coarse embedding into Hilbert space if for each scale it is acceptable to forget bounded portions of the space and embed what remains locally into Hilbert space in a manner compatible with the global structure. We make this precise in Definition \ref{def:FCE}.
 
 In other words, when a space has this property we are really explaining its structure at infinity. Another approach to this was considered in \cite{mypub1}, in which a conjecture known as the \textit{boundary coarse Baum-Connes conjecture} was defined for uniformly discrete bounded geometry spaces. This conjecture, defined via groupoids, was designed to capture the structure of a space at infinity. 
 
-In \cite{FCEpaper} the property of having a fibred coarse embedding into Hilbert space was sufficient to prove the maximal coarse Baum-Connes assembly map is an isomorphism for any uniformly discrete metric space with bounded geometry. The proof relies on understanding an associated algebra at infinity, which is the same as the algebra considered in \cite{mypub1}. This allows us to consider a groupoid approach to these assembly problems providing a generalisation of the ideas from \cite{MR1905840}.
+In \cite{FCEpaper} the property of having a fibred coarse embedding into Hilbert space was sufficient to prove the maximal coarse Baum-Connes assembly map is an isomorphism for any uniformly discrete metric space with bounded geometry. The proof relies on understanding an associated algebra at infinity, which is the same as the algebra considered in \cite{mypub1}. In this paper we consider a groupoid approach to these assembly problems using a generalisation of the ideas from \cite{MR1905840}.
 
 The approach to the injectivity question we present in this paper is via the Haagerup property for locally compact groupoids, introduced by Tu in \cite{MR1703305}. For suitable groupoids this is equivalent to a a proper negative type function and for coarse groupoids it was shown in Theorem 5.4 of \cite{MR1905840} that for a uniformly discrete bounded geometry space $X$, the coarse groupoid has the Haagerup property if and only if $X$ coarsely embeds into Hilbert space. 
 
@@ -97,7 +98,10 @@ Let $X$ be a uniformly discrete space with bounded geometry that admits a fibred
 This result gives us access to the tools developed in \cite{mypub1} concerning the boundary coarse Baum-Connes conjecture and in in Section \ref{sect:apps} we provide applications of Theorem \ref{Thm:MT1} to the coarse Novikov conjecture for uniformly discrete spaces with bounded geometry (Theorem \ref{thm:mcor1}), a question of Roe concerning ghost operators within Roe algebras associated to coarsely embeddable spaces (Corollary \ref{thm:IT3}) 
 and give a characterisation of the Haagerup property for residually finite groups via box spaces (Theorem \ref{thm:cor2}). %We would like to remark that this last result will appear in \cite{a-Tpreprint} by other methods. 
 
-We recap now the important details surrounding Theorem 5.4 from \cite{MR1905840} and give an overview of the full strategy for Theorem \ref{Thm:MR1}.
+We recap now the important details surrounding Theorem 5.4 from \cite{MR1905840} and the notion of a fibred coarse embedding \cite{FCEpaper}.
+
+\section*{Acknowledgements}
+The author would like to thank his supervisor, Nick Wright, for reminding him of the Riesz representation theorem. For that alone he is greatly appreciated.
 
 \section{Fibred coarse embeddings and groupoids associated to coarse spaces.}\label{sect:coarse}
 Throughout this section $X$ will denote a metric space with a proper metric, unless otherwise stated.
@@ -119,7 +123,7 @@ The application of a coarse embedding into Hilbert space is the main result of \
 Let $X$ be a uniformly discrete metric space with bounded geometry that admits a coarse embedding into Hilbert space. Then the coarse Baum-Connes conjecture holds for $X$, that is the assembly map $\mu_{*}$ is an isomorphism.\qed
 \end{theorem}
 
-Many metric spaces admit coarse embeddings; the property is a suitably flexible one as it is implied by many other coarse properties such as finite asymptotic dimension \cite{}, or the weaker properties of finite decomposition complexity \cite{} and property A \cite{}. The primary application is to finitelygenerated discrete groups via the well known descent principle in coarse geometry:
+Many metric spaces admit coarse embeddings; the property is a suitably flexible one as it is implied by many other coarse properties such as finite asymptotic dimension \cite{MR1739727}, or the weaker properties of finite decomposition complexity \cite{MR2947546} and property A \cite{MR1728880}. The primary application is to finitelygenerated discrete groups via the well known descent principle in coarse geometry:
 
 \begin{corollary}
 Let $\Gamma$ be a finitely generated discrete group admitting a coarse embedding into Hilbert space. Then the (strong) Novikov conjecture holds for $\Gamma$.\qed
@@ -147,7 +151,7 @@ for each $C \subset X \setminus K$ of diameter less than $r$. We ask that this m
 \end{enumerate}
 \end{definition}
 
-In particular many expanders are known to satisfy this property, such as those coming from discrete groups with the Haagerup property \cite{FCEpaper,MR2568691} or those of large girth.
+In particular many expanders are known to satisfy this property, such as those coming from discrete groups with the Haagerup property  or those of large girth \cite{FCEpaper,MR2568691}.
 
 The main application from \cite{FCEpaper} of this property is Theorem 1.1:
 
@@ -266,7 +270,7 @@ if there exists $S_{1},S_{2},S_{3}>0$ such that  $(x,y) \in A_{S_{1}},(y,z) \in 
 The fact that composition is well defined, as well as the other groupoid axioms is technical but clear. The fact it passes to completions relies on the fact that nets with cofinite overlap have the same limit.
 \end{proof}
 
-\begin{remark}\label{rem:outline}
+\begin{rem}\label{rem:outline}
 Let $X$ admit a fibred coarse embedding into Hilbert space.
 \begin{enumerate}
 \item $A_{R}:=\Delta_{R}(X\setminus K_{R})$ is an entourage with the same corona as $\Delta_{R}$. Assume that $X$ admits a fibred coarse embedding into Hilbert space with respect to $\mathcal{F}$. Then for each $R>0$ such that and the following function is defined on $A_{R}$:
@@ -276,14 +280,15 @@ k_{R}(x,y)=\Vert t_{x}(x)(s(x))-t_{x}(y)(s(y))\Vert^{2}
 where $t_{x}:H_{x} \rightarrow \mathcal{H}$ is the affine isometry provided by the fibred coarse embedding.
 \item In the special case that $X$ is a space of graphs $\sqcup X_{i}$, the $A_{R}$'s defined above have the form: $A_{R}= \sqcup_{i\geq i_{R}}\Delta_{R}^{i}$ for some $i\geq i_{R}$.
 \item It is clear that $G(X)|_{\partial\beta X}$ is the boundary groupoid of $\mathcal{M}_{\mathcal{F}}(X)$.
-\item We aim to extend each $k_{R}$ to the boundary and show that the $k_{R}$ fit together to define a global function $f$ on the boundary.
 \item As $G(X)|_{\partial\beta X} = \bigcup_{R>0} \overline{\Delta_{R}}\setminus \Delta_{R}$ topologically, we know that for any $\gamma \in G(X)|_{\partial\beta X}$ that there is a smallest $R>0$ such that $\gamma \in \overline{\Delta_{R}}\setminus \Delta_{R}$. 
 
 \end{enumerate}
-\end{remark}
+\end{rem}
+
+We now extend each $k_{R}$ to the boundary fit together to define a global function $f$ that is well-defined on $\mathcal{M}_{\mathcal{F}}(X)$.
 
 \begin{proposition}\label{prop:wd}
-There is a globally defined function $f$ that is constructed from the $\tilde{k}_{R}$. The function $f$ is well defined and continuous.
+There is a globally defined function $f$ that is constructed from the $\tilde{k}_{R}$. The function $f$ is well defined and continuous on $\mathcal{M}_{\mathcal{F}}(X)$.
 \end{proposition}
 \begin{proof}
 We have two considerations:
@@ -429,7 +434,7 @@ Let $X$ be a uniformly discrete bounded geometry metric space, $i: \mathcal{K} \
 \begin{proof}
 Without loss of generality we state the proof for graphs. 
 
-Claim (1) relies on an argument involving groupoid equivariant KK-theory. We consider the following diagram, with notation following \cite{}, where $P_{E}(G(X))$ is the closure of $P_{E}(X)\times X$ in the weak $*$-topology on the dual of $C_{c}(G(X))$:
+Claim (1) relies on an argument involving groupoid equivariant KK-theory. We consider the following diagram, with notation following \cite{MR1905840,MR1656031}, where $P_{E}(G(X))$ is the closure of $P_{E}(X)\times X$ in the weak $*$-topology on the dual of $C_{c}(G(X))$:
 \begin{equation*}
 \xymatrix{KK_{X\times X}(C_{0}(U),C_{0}(X,\mathcal{K})) \ar[r]_{1} & KK_{G(X)}(C_{0}(P_{E}(G(X))),\ell^{\infty}(X,\mathcal{K})) \ar[r]^{\cong}_{4}  & KK(C_{0}(P_{E}(X)),\mathbb{C}) \\
 & KK(\mathbb{C},\mathbb{C}) \ar^{\cong}_{2}[lu]\ar[u]_{3}\ar[ur]_{5}&
@@ -506,20 +511,20 @@ When $X$ fibred coarsely embeds into Hilbert space, we know that $\mu^{bdry}$ is
 
 Now assume $X$ has only finite coarse components: it is enough to consider just sequences of finite graphs $\lbrace X_{i}\rbrace$ and in this case we have access to a tracelike map defined in \cite{higsonpreprint, explg1} given as follows.
 
-For any $T \in C^{*}X$ we have a natural decomposition $T= T_{0} \sqcup \bigsqcup_{i>i_{R}}T_{i}$, where each $T_{i} \in C^{*}X_{i}$. We define a map $\frac{\prod_{i}C^{*}X_{i}}{\oplus C^{*}X_{i}}$ that sends each $T$ to $\prod_{i>i_{R}} T_{i}$. This induces a map on K-theory which we denote by $Tr$.
+For any $T \in C^{*}X$ we have a natural decomposition $T= T_{0} \sqcup \bigsqcup_{i>i_{R}}T_{i}$, where each $T_{i} \in C^{*}X_{i}$. We define a map $\frac{\prod_{i}C^{*}X_{i}}{\oplus C^{*}X_{i}}$ that sends each $T$ to $\prod_{i>i_{R}} T_{i}$. This induces a map on K-theory that we denote by $Tr$.
 \begin{eqnarray*}
 Tr:K_{0}(C^{*}X) \rightarrow \frac{\prod_{i}K_{0}(C^{*}X_{i})}{\oplus_{i}K_{0}(C^{*}X_{i})}.
 \end{eqnarray*}
-Under this trace, a non-compact ghost projection will be non-zero, but a compact will be $0$. If $\mu$ is an isomorphism, it follows that every ghost projection is equivalent to a compact on K-theory, that is $K_{*}(\mathcal{K}) \cong K_{*}(I_{G})$. Hence, any ghost projection in $C^{*}(X)$ vanishes under $Tr$, which happens if and only if the ghost projection is compact \cite{explg1}.
+Under this trace a non-compact ghost projection will be non-zero but a compact will be $0$. If $\mu$ is an isomorphism, it follows that every ghost projection is equivalent to a compact on K-theory, that is $K_{*}(\mathcal{K}) \cong K_{*}(I_{G})$. Hence, any ghost projection in $C^{*}(X)$ vanishes under $Tr$, which happens if and only if the ghost projection is compact \cite{explg1}.
 \end{proof}
 
-A natural corollary of this concerns coarse embeddings, which was a question initially raised by Roe \cite{}:
+A natural corollary of this concerns coarse embeddings, which partially answers a question initially raised by Roe \cite[Chapter 11]{MR2007488}:
 
 \begin{corollary}\label{thm:IT3}
 If $X$ coarsely embeds into Hilbert space then $K_{*}(I_{G}) \cong K_{*}(\mathcal{K})$. \qed
 \end{corollary}
 
-In particular Proposition \ref{thm:MT2} for the spaces of graphs that coarsely embed into Hilbert space but do not have property A \cite{,} implies that these spaces do not have any non-compact ghost projections. 
+In particular Proposition \ref{thm:MT2} for the spaces of graphs that coarsely embed into Hilbert space but do not have property A \cite{MR2899681,MR2920843} implies that these spaces do not have any non-compact ghost projections. 
 
 \subsection{Box spaces of residually finite discrete groups.}
 The last application of the main result of this paper concerns box spaces of finitely generated residually finite groups. We show that admitting a fibred coarse embedding into Hilbert space characterises the Haagerup property in this instance. 
@@ -543,16 +548,20 @@ Clearly, $\mu(1_{\beta X})=1$ and $\mu$ is linear, whence $\mu$ is a linear func
 After relabelling the elements $x \in X_{i}$ by $g^{-1}x^{'}$, we now see that $\mu(f)=\mu(g \circ f)$. The result now follows.
 \end{proof}
 
-It is well known that the boundary groupoid associated to a box space $\square\Gamma$ decomposes as $\partial\beta \square \Gamma \rtimes \Gamma$, for a proof see \cite{mypub1}. Lemma \ref{lem:cor2}, plus a result of \cite{BG-action-2012} allows us to prove:
+It is well known that the boundary groupoid associated to a box space $\square\Gamma$ decomposes as $\partial\beta \square \Gamma \rtimes \Gamma$, for a proof see \cite{mypub1}. We now recall Corollary 5.12 of \cite{BG-action-2012}:
+
+\begin{proposition}\label{prop:cor}
+Let $\Gamma$ be a discrete group acting on a space $X$ with an invariant probablity measure $\mu$. Then the action is a-T-menable if and only if $\Gamma$ is a-T-menable.\qed
+\end{proposition}
+
+Now Lemma \ref{lem:cor2}, plus the above Proposition allow us to prove:
+
 \begin{theorem}\label{thm:cor2}
 If the box space $\square \Gamma$ admits a fibred coarse embedding then the group $\Gamma$ has the Haagerup property.
 \end{theorem}
 \begin{proof}
-The boundary groupoid decomposes as $G(\square\Gamma)|_{\partial\beta \square \Gamma} \cong \partial\beta \square \Gamma \rtimes \Gamma$. Using Corollary \ref{Thm:MT1}, we know that this groupoid has the Haagerup property. Lemma \ref{lem:cor2} and Corollary 5.12 in \cite{BG-action-2012} then imply that this can happen if and only if $\Gamma$ also has the Haagerup property.  
+The boundary groupoid decomposes as $G(\square\Gamma)|_{\partial\beta \square \Gamma} \cong \partial\beta \square \Gamma \rtimes \Gamma$. Using Corollary \ref{Thm:MT1}, we know that this groupoid has the Haagerup property. Lemma \ref{lem:cor2} and Proposition \ref{prop:cor} then imply that this can happen if and only if $\Gamma$ also has the Haagerup property.  
 \end{proof}
-
-\section*{Acknowledgements}
-The author would like to thank his supervisor, Nick Wright, for reminding him of the Riesz representation theorem. For that alone he is greatly appreciated.
 
 \bibliography{ref.bib}
 \end{document}
