@@ -62,7 +62,7 @@
 \bibliographystyle{alpha}
 \maketitle
 \begin{abstract}
-The connection between the coarse geometry of metric spaces and analytic properties of topological groupoids is well known. The main results of of Skandalis, Tu and Yu is that a space admits a coarse embedding into Hilbert space if and only if to the associated topological groupoid has the Haagerup property, from where it follows that the coarse Baum-Connes conjecture holds for such a space. The property of a admitting a fibred coarse embedding into Hilbert space was introduced by Chen, Wang and Yu to provide a property that is sufficient for the maximal analogue to the coarse Baum-Connes conjecture and in this paper we connect this property to the traditional coarse Baum-Connes conjecture by constructing a groupoid, similar to the coarse groupoid, that has the Haagerup property if and only if the space admits a fibred coarse embedding into Hilbert space. Additionally, we use this result to give a new characterisation of the Haagerup property for residually finite discrete groups.
+The connection between the coarse geometry of metric spaces and analytic properties of topological groupoids is well known. One of the main results of of Skandalis, Tu and Yu is that a space admits a coarse embedding into Hilbert space if and only if to the associated topological groupoid has the Haagerup property, from where it follows that the coarse Baum-Connes conjecture holds for such a space. The property of a admitting a fibred coarse embedding into Hilbert space was introduced by Chen, Wang and Yu to provide a property that is sufficient for the maximal analogue to the coarse Baum-Connes conjecture and in this paper we connect this property to the traditional coarse Baum-Connes conjecture by constructing a groupoid, similar to the coarse groupoid, that has the Haagerup property if and only if the space admits a fibred coarse embedding into Hilbert space. Additionally, we use this result to give a characterisation of the Haagerup property for residually finite discrete groups.
 \end{abstract}
 
 \section{Introduction}
@@ -98,7 +98,7 @@ This result gives us access to the tools developed in \cite{mypub1} concerning t
 We recap now the important details surrounding Theorem 5.4 from \cite{MR1905840} and the notion of a fibred coarse embedding \cite{FCEpaper}.
 
 \section*{Acknowledgements}
-The author would like to thank his supervisor, Nick Wright, for reminding him of the Riesz representation theorem. For that alone he is greatly appreciated.
+The author would like to thank his supervisor, Nick Wright, for reminding him of the Riesz representation theorem.
 
 \section{Fibred coarse embeddings and groupoids associated to coarse spaces.}\label{sect:coarse}
 Throughout this section $X$ will denote a metric space with a proper metric, unless otherwise stated.
@@ -128,7 +128,9 @@ Let $\Gamma$ be a finitely generated discrete group admitting a coarse embedding
 
 For more information on the strong Novikov conjecture and its connections to coarse geometry see \cite{MR1388300, MR1905840}.
 
-It is well known that there are spaces that do not admit a coarse embedding into Hilbert space such as expander graphs \cite{MR2569682}. Certain types of expander graph are known to be counterexamples to the Baum-Connes conjecture \cite{higsonpreprint,MR1911663,explg1,explg2,MR2568691}, but it is known that they do satisfy the coarse analogue of the Novikov conjecture and the maximal coarse Baum-Connes conjecture. The notion of a fibred coarse embedding was introduced in \cite{FCEpaper} where the authors gave results that partially explained this phenomenon. The following is Definition 2.1 from \cite{FCEpaper}.
+It is well known that there are spaces that do not admit a coarse embedding into Hilbert space such as expander graphs \cite{MR2569682}. Certain types of expander graph are known to be counterexamples to the Baum-Connes conjecture \cite{higsonpreprint,MR1911663,explg1,explg2,MR2568691}, but it is known that they do satisfy the coarse analogue of the Novikov conjecture and the maximal coarse Baum-Connes conjecture. The notion of a fibred coarse embedding was introduced in \cite{FCEpaper} where the authors gave results that partially explained these phenomena.
+
+The following is Definition 2.1 from \cite{FCEpaper}.
 
 \begin{definition}
 A metric space $X$ is said to admit a \textit{fibred coarse embedding} into Hilbert space if there exists
@@ -150,7 +152,7 @@ for each $C \subset X \setminus K$ of diameter less than $r$. We ask that this m
 
 In particular many expanders are known to satisfy this property, such as those coming from discrete groups with the Haagerup property  or those of large girth \cite{FCEpaper,MR2568691}.
 
-The main application from \cite{FCEpaper} of this property is Theorem 1.1:
+The main application of this property is Theorem 1.1 \cite{FCEpaper}:
 
 \begin{theorem}\label{Thm:FCEMR}
 Let $X$ be a proper metric space admitting a fibred coarse embedding into Hilbert space. Then the maximal coarse Baum-Connes conjecture holds for $X$.\qed
@@ -204,11 +206,11 @@ Then let $\mathcal{E}$ be the coarse structure generated by $\mathcal{S}$. This 
 To build a groupoid from the metric coarse structure on $X$ we consider extensions of the pair product on $X \times X$. The most natural way to do this is by making use of the entourages arising from the metric by enlarging them inside the universal compactification $\beta(X \times X)$. In order to get a suitable product on this object we utilise the following Lemma, which is Corollary 10.18 from \cite{MR2007488}:
 
 \begin{lemma}\label{Lem:CorRoe} 
-Let $X$ be a uniformly discrete bounded geometry metric space and let $E$ be any entourage. Then the inclusion $E \rightarrow X \times X$ extends to an injective homeomorphism $\overline{E} \rightarrow \beta X \times \beta X$, where $\overline{E}$ denotes the closure of $E$ in $\beta(X \times X)$.
+Let $X$ be a uniformly discrete bounded geometry metric space and let $E$ be any entourage. Then the inclusion $E \rightarrow X \times X$ extends to an injective homeomorphism $\overline{E} \rightarrow \beta X \times \beta X$, where $\overline{E}$ denotes the closure of $E$ in $\beta(X \times X)$.\qed
 \end{lemma}
 Now we can make the definition of the coarse groupoid $G(X)$:
 \begin{theorem}(\cite[Theorem 10.20]{MR2007488})
-Let $X$ be a coarse space with uniformly locally finite, weakly connected coarse structure $\mathcal{E}$. Define $G(X):=\cup_{E\in \mathcal{E}}\overline{E}.$ Then $G(X)$ is a locally compact, $\sigma$-compact, \'etale groupoid with the induced product, inverse and topology from $\beta X \times \beta X$.
+Let $X$ be a coarse space with uniformly locally finite, weakly connected coarse structure $\mathcal{E}$. Define $G(X):=\cup_{E\in \mathcal{E}}\overline{E}.$ Then $G(X)$ is a locally compact, $\sigma$-compact, \'etale groupoid with the induced product, inverse and topology from $\beta X \times \beta X$.\qed
 \end{theorem}
 As we are considering the metric coarse structure we can reduce this to considering only generators:
 \begin{equation*}
