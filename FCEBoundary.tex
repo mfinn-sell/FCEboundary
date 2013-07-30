@@ -105,7 +105,7 @@ This result gives us access to the tools developed in \cite{mypub1} concerning t
 We recap now the important details surrounding Theorem 5.4 from \cite{MR1905840} and the notion of a fibred coarse embedding \cite{FCEpaper}.
 
 \section*{Acknowledgements}
-The author would like to thank his supervisor, Nick Wright, for reminding him of the Riesz representation theorem and J\'{a}n \u{S}pakula for some helpful comments concerning countability.
+The author would like to thank his supervisor, Nick Wright, for reminding him of the Riesz representation theorem and J\'{a}n \u{S}pakula for some helpful comments concerning second countability.
 
 \section{Fibred coarse embeddings and groupoids associated to coarse spaces}\label{sect:coarse}
 Throughout this section $X$ will denote a metric space with a proper metric, unless otherwise stated.
@@ -246,14 +246,13 @@ Let $\mathcal{F}:=\lbrace K_{R} \rbrace$ be a family of bounded subsets of X. Le
 \end{definition}
 
 \begin{lemma}
-$\mathcal{M}_{\mathcal{F}}(X)$ is a groupoid with operations induced from the pair groupoid operation defined where it makes sense; i.e:
+$\mathcal{M}_{\mathcal{F}}(X)$ is a groupoid with operations induced from the pair groupoid operation defined where it makes sense; i.e for $(x,y) \in A_{R}, (y^{'},z)\in A_{S}$:
 \begin{equation*}
-(x,y)(y,z)=(x,z)
+(x,y)(y^{'},z)=(x,z) \mbox{ if } y=y^{'} \mbox{ and } (x,z) \in A_{R+S}.
 \end{equation*}
-if there exists $S_{1},S_{2},S_{3}>0$ such that  $(x,y) \in A_{S_{1}},(y,z) \in A_{S_{2}}$ and $(x,z) \in A_{S_{3}}$.  
 \end{lemma}
 \begin{proof}
-The fact that composition is well defined, as well as the other groupoid axioms is technical but clear. The fact it passes to completions relies on the fact that nets with cofinite intersection have the same limit.
+The groupoid axioms are technical, but clear. Lemma \ref{Lem:CorRoe} still applies to ensure this product passes to the boundary, where it defines the same product present on the boundary groupoid $G(X)|_{\partial\beta X}$.
 \end{proof}
 
 \begin{rem}\label{rem:outline}
@@ -417,19 +416,19 @@ Let $X$ be a uniformly discrete bounded geometry metric space, $i: \mathcal{K} \
 \begin{proof}
 Without loss of generality we state the proof for graphs. 
 
-Claim (1) relies on an argument involving groupoid equivariant KK-theory \cite{MR1656031,MR1686846,MR1798599}.  Let $Z$ be a proper $G(X)$-space (such as $P_{E}(G(X))$ for some entourage $E$), $U$ be the preimage of $X$ under the anchoring map and $Z_{x}$ be the preimage of the singleton $x \in X$. We consider the following diagram, with notation following \cite{MR1905840,MR1656031}:
+Claim (1) relies on an argument involving groupoid equivariant KK-theory \cite{MR1656031,MR1686846,MR1798599}. We remark that it is useful in this instance to decompose $G(X)=\beta X \rtimes \G_{A}$, where $\G_{A}$ is some second countable, Hausdorff \'etale groupoid that contains the pair groupoid $X \times X$ as an open subgroupoid. This is possible by Lemma 3.3b) of \cite{MR1905840}. We then identify $KK_{\G_{A}}$ with $KK_{G(X)}$ where appropriate using Theorem 3.8 from \cite{cbcag2}. Let $Z$ be a proper $\G_{A}$-space (such as $P_{E}(\G_{A})$ for some entourage $E$), $U$ be the preimage of $X$ under the anchoring map and $Z_{x}$ be the preimage of the singleton $x \in X$ We consider the following diagram, with notation following \cite{MR1905840,MR1656031}:
 \begin{equation*}
-\xymatrix{KK_{X\times X}(C_{0}(U),C_{0}(X,\mathcal{K})) \ar[r]_{1} & KK_{G(X)}(C_{0}(Z),\ell^{\infty}(X,\mathcal{K})) \ar[r]^{\cong}_{4}  & KK(C_{0}(Z_{x}),\mathbb{C}) \\
+\xymatrix{KK_{X\times X}(C_{0}(U),C_{0}(X,\mathcal{K})) \ar[r]_{1} & KK_{\G_{A}}(C_{0}(Z),\ell^{\infty}(X,\mathcal{K})) \ar[r]^{\cong}_{4}  & KK(C_{0}(Z_{x}),\mathbb{C}) \\
 & KK(\mathbb{C},\mathbb{C}) \ar^{\cong}_{2}[lu]\ar[u]_{3}\ar[ur]_{5}&
 }
 \end{equation*}
-If this diagram commutes for any proper $G(X)$-space $Z$ then we can consider $Z = P_{E}(G(X))$ and take the limit through the directed set of entourages $E \in \mathcal{E}$:
+If this diagram commutes for any proper $\G_{A}$-space $Z$ then we can consider $Z = P_{E}(\G_{A})$ and take the limit through the directed set of entourages $E \in \mathcal{E}$:
 \begin{equation*}
-\xymatrix{K^{top}(X \times X, C_{0}(X,\mathcal{K})) \ar[r] & K^{top}(G(X)),\ell^{\infty}(X,\mathcal{K})) \ar[r]^{\cong}  & KX_{*}(X) \\
+\xymatrix{K^{top}(X \times X, C_{0}(X,\mathcal{K})) \ar[r] & K^{top}(\G_{A},\ell^{\infty}(X,\mathcal{K})) \ar[r]^{\cong}  & KX_{*}(X) \\
 & KK(\mathbb{C},\mathbb{C}) \ar^{\cong}[lu]\ar[u]\ar[ur]&
 }
 \end{equation*}
-We can then conclude the result by observing that having an infinite coarse component in $X$ implies that including a point factors through the coarse K-homology of a ray and hence is the zero map.
+Where Theorem 3.8 \cite{cbcag2} allows us to identify $K^{top}_{*}(X\times X , C_{0}(X,\mathcal{K}))$ with $K^{top}_{*}(\G_{A}, C_{0}(X,\mathcal{K}))$ and $K^{top}(G(X), \ell^{\infty}(X,\mathcal{K}))$ with $K^{top}_{*}(\G_{A},\ell^{\infty}(X,\mathcal{K}))$. We can then conclude the result by observing that having an infinite coarse component in $X$ implies that including a point factors through the coarse K-homology of a ray and hence is the zero map.
 
 We now prove the first diagram commutes. Consider the maps:
 \begin{eqnarray*}
